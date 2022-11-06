@@ -1,0 +1,12 @@
+<launch>
+    <node pkg="tf2_ros" type="static_transform_publisher" name="world2sun_broadcaster" args="0 0 0 0 0 0 world sun" />
+
+    <node pkg="demo1" type="tf_broadcaster_demo1" name="tf_broadcaster_demo1" output="screen"/>
+
+    <node pkg="demo1" type="sun_marker" name="sun_marker" output="screen" />
+    <node pkg="demo1" type="earth_marker" name="earth_marker" output="screen" />
+    <node pkg="demo1" type="moon_marker" name="moon_marker" output="screen" />
+
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find demo1)/rviz/demo1.rviz" />
+
+</launch>
