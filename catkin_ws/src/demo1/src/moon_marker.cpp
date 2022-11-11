@@ -91,7 +91,7 @@ int main(int argc, char* argv[]) {
         marker.pose.orientation = pose.orientation;
 
         track.points.push_back(pose.position);
-        if (track.points.size() > 50)
+        if (track.points.size() > 30)
             track.points.erase(track.points.begin());
 
         // publish
